@@ -1,0 +1,182 @@
+[
+  {
+    "id": "eval_01",
+    "question": "What is the standard deduction?",
+    "reference_answer": "The standard deduction is a fixed dollar amount that reduces taxable income, available instead of itemizing deductions like medical expenses and charitable contributions.",
+    "expected_source": "pub17",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_02",
+    "question": "What is the standard deduction amount for a single filer in 2025?",
+    "reference_answer": "$15,750 for the 2025 tax year.",
+    "expected_source": "current_figures_reference",
+    "grading_type": "deterministic",
+    "expected_value": ["15,750", "15750"]
+  },
+  {
+    "id": "eval_03",
+    "question": "What is the standard deduction for married filing jointly in 2025?",
+    "reference_answer": "$31,500 for the 2025 tax year.",
+    "expected_source": "current_figures_reference",
+    "grading_type": "deterministic",
+    "expected_value": ["31,500", "31500"]
+  },
+  {
+    "id": "eval_04",
+    "question": "How does the law define gross income?",
+    "reference_answer": "Gross income means all income from whatever source derived, as defined in 26 U.S.C. Section 61, unless specifically excluded elsewhere in the code.",
+    "expected_source": "section_61",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_05",
+    "question": "How is taxable income defined under the tax code?",
+    "reference_answer": "Taxable income means gross income minus the deductions allowed by the chapter, including (for those who itemize) or excluding (for those who take the standard deduction) certain deductions, per Section 63.",
+    "expected_source": "section_63",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_06",
+    "question": "Can my standard deduction be limited if my parents claim me as a dependent?",
+    "reference_answer": "Yes. If you can be claimed as a dependent on someone else's return, your standard deduction may be limited compared to the regular amount.",
+    "expected_source": "pub17",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_07",
+    "question": "Is there an extra standard deduction if I'm 65 or older?",
+    "reference_answer": "Yes, taxpayers who are 65 or older (or blind) can claim an additional standard deduction amount on top of the regular standard deduction.",
+    "expected_source": "pub17",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_08",
+    "question": "What is the enhanced deduction for seniors starting in 2025?",
+    "reference_answer": "Beginning in 2025, taxpayers 65 or older may be eligible for an enhanced senior deduction of up to $6,000 per person, subject to income phase-outs, under the One Big Beautiful Bill Act.",
+    "expected_source": "current_figures_reference",
+    "grading_type": "deterministic",
+    "expected_value": ["6,000", "6000"]
+  },
+  {
+    "id": "eval_09",
+    "question": "What is a Self-Select PIN used for when e-filing?",
+    "reference_answer": "A Self-Select PIN is used to electronically sign a tax return when filing online, either through software or a tax practitioner.",
+    "expected_source": "pub17",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_10",
+    "question": "What happens if I don't include my IP PIN on an electronic return that requires one?",
+    "reference_answer": "Failure to include an issued IP PIN on the electronic return results in an invalid signature and a rejected return.",
+    "expected_source": "pub17",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_11",
+    "question": "Does using e-file affect my chances of being audited?",
+    "reference_answer": "No, using e-file does not affect your chances of an IRS examination of your return.",
+    "expected_source": "pub17",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_12",
+    "question": "If I'm filing a joint return and both spouses have IP PINs, what do I need to do?",
+    "reference_answer": "Both taxpayers' IP PINs must be entered in the spaces provided on the joint return.",
+    "expected_source": "pub17",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_13",
+    "question": "Who can I claim as a dependent on my tax return?",
+    "reference_answer": "Dependents are defined under 26 U.S.C. Section 152, which sets out qualifying child and qualifying relative rules, among other requirements.",
+    "expected_source": "section_152",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_14",
+    "question": "Should I take the standard deduction or itemize?",
+    "reference_answer": "You should use whichever method results in the lower tax; the standard deduction eliminates the need to itemize but you can compare both.",
+    "expected_source": "pub17",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_15",
+    "question": "What is the additional standard deduction amount for a married taxpayer who is 65 or older?",
+    "reference_answer": "$1,600 per qualifying spouse for the 2025 tax year.",
+    "expected_source": "current_figures_reference",
+    "grading_type": "deterministic",
+    "expected_value": ["1,600", "1600"]
+  },
+  {
+    "id": "eval_16",
+    "question": "What tax topics does IRS Publication 17 cover?",
+    "reference_answer": "Publication 17, 'Your Federal Income Tax,' is a plain-language IRS guide covering filing requirements, standard and itemized deductions, income types, and other individual income tax topics.",
+    "expected_source": "pub17",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_17",
+    "question": "What is the standard deduction for head of household filers in 2025?",
+    "reference_answer": "$23,625 for the 2025 tax year.",
+    "expected_source": "current_figures_reference",
+    "grading_type": "deterministic",
+    "expected_value": ["23,625", "23625"]
+  },
+  {
+    "id": "eval_18",
+    "question": "Are unemployment benefits considered gross income?",
+    "reference_answer": "Yes, unemployment compensation is generally included as a form of income under the broad definition of gross income.",
+    "expected_source": "pub17",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_19",
+    "question": "What are the capital gains tax rates for 2025?",
+    "reference_answer": "NOT ANSWERABLE FROM CORPUS — capital gains rate tables are not part of the ingested Pub 17/Title 26 excerpts. A correct system should say it doesn't have this information rather than guessing.",
+    "expected_source": "none (should decline to answer)",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_20",
+    "question": "What is the deadline to file my state tax return in California?",
+    "reference_answer": "NOT ANSWERABLE FROM CORPUS — this is a state tax question; the corpus only covers federal tax (Pub 17, Title 26). A correct system should say this is out of scope rather than guessing.",
+    "expected_source": "none (should decline to answer)",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_21",
+    "question": "Can I claim the standard deduction if I'm filing as married filing separately?",
+    "reference_answer": "Generally yes, MFS filers have their own standard deduction amount (typically half the joint-return amount). However, if your spouse itemizes deductions on their separate return, you cannot claim the standard deduction at all and must itemize too.",
+    "expected_source": "pub17",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_22",
+    "question": "What is 26 U.S. Code Section 63 about?",
+    "reference_answer": "Section 63 defines 'taxable income' as gross income minus allowable deductions, and separately addresses the standard deduction for individuals who don't itemize.",
+    "expected_source": "section_63",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_23",
+    "question": "Does the standard deduction amount in the tax code itself reflect this year's actual dollar amount?",
+    "reference_answer": "No. The dollar amounts written in Section 63 are base statutory amounts that are adjusted annually for inflation via separate IRS revenue procedures; the actual current-year amount comes from that annual adjustment, not directly from the statute text.",
+    "expected_source": "section_63 (with annual-adjustment caveat)",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_24",
+    "question": "What is Schedule A used for?",
+    "reference_answer": "Schedule A (Form 1040) is used to itemize deductions, such as medical expenses, charitable contributions, and taxes, instead of taking the standard deduction.",
+    "expected_source": "pub17",
+    "grading_type": "llm_judge"
+  },
+  {
+    "id": "eval_25",
+    "question": "Who is eligible for the enhanced senior deduction, and does everyone 65+ get the full amount?",
+    "reference_answer": "Taxpayers 65 or older may be eligible for the enhanced senior deduction of up to $6,000 per person, but it phases out above certain income thresholds, so not everyone 65+ receives the full amount.",
+    "expected_source": "current_figures_reference",
+    "grading_type": "llm_judge"
+  }
+]

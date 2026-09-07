@@ -1,0 +1,411 @@
+{
+  "run_at": "2026-09-05T00:03:10.176860+00:00",
+  "prompt_version": 1,
+  "total": 25,
+  "passed": 24,
+  "failed": 1,
+  "judge_errors": 0,
+  "pass_rate": 0.96,
+  "results": [
+    {
+      "id": "eval_01",
+      "question": "What is the standard deduction?",
+      "reference_answer": "The standard deduction is a fixed dollar amount that reduces taxable income, available instead of itemizing deductions like medical expenses and charitable contributions.",
+      "generated_answer": "# What is the Standard Deduction?\n\nThe standard deduction is a dollar amount that reduces your taxable income. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf) It eliminates the need for many taxpayers to itemize actual deductions, such as medical expenses, charitable contributions, and taxes, on Schedule A (Form 1040). [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\n## 2025 Standard Deduction Amounts\n\nThe standard deduction depends on your filing status:\n\n- **Single**: $15,750 [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals)\n- **Married Filing Jointly**: $31,500 [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals)\n- **Married Filing Separately**: $15,750 [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals)\n- **Head of Household**: $23,625 [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals)\n\n## Additional Amounts\n\nIf you are **65 or older or blind**, you can claim an additional standard deduction: [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\n- **Single or Head of Household**: $2,000 [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals)\n- **Married (per qualifying spouse)**: $1,600 [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals)\n\n## Enhanced Deduction for Seniors (New for 2025)\n\nTaxpayers who are age 65 or older may be eligible for an enhanced deduction for seniors of up to **$6,000 per person**. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf) This amount phases out above certain income thresholds. [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals)\n\n## How It Works\n\nYou can choose to take the standard deduction or itemize your deductions, whichever method gives you the lower tax. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "section_63",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly defines standard deduction as fixed amount reducing taxable income, available instead of itemizing deductions, matching reference answer's key facts."
+    },
+    {
+      "id": "eval_02",
+      "question": "What is the standard deduction amount for a single filer in 2025?",
+      "reference_answer": "$15,750 for the 2025 tax year.",
+      "generated_answer": "For a single filer in 2025, the standard deduction amount is **$15,750** [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nIf you are age 65 or older or blind, you may qualify for an additional standard deduction of $2,000 [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf). Additionally, if you are age 65 or older, you may be eligible for an enhanced deduction for seniors of up to $6,000 per person [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "deterministic",
+      "verdict": "pass",
+      "judge_reasoning": "Found expected value '15,750' in generated answer."
+    },
+    {
+      "id": "eval_03",
+      "question": "What is the standard deduction for married filing jointly in 2025?",
+      "reference_answer": "$31,500 for the 2025 tax year.",
+      "generated_answer": "The standard deduction for married filing jointly in 2025 is **$31,500** [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nThis applies to married couples who are under age 65 and not blind. If either spouse is age 65 or older, or blind, you may qualify for an additional standard deduction of $1,600 per qualifying spouse [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "deterministic",
+      "verdict": "pass",
+      "judge_reasoning": "Found expected value '31,500' in generated answer."
+    },
+    {
+      "id": "eval_04",
+      "question": "How does the law define gross income?",
+      "reference_answer": "Gross income means all income from whatever source derived, as defined in 26 U.S.C. Section 61, unless specifically excluded elsewhere in the code.",
+      "generated_answer": "# Definition of Gross Income\n\nAccording to federal tax law, **gross income means all income from whatever source derived** [section_61(a)]. This includes:\n\n- Compensation for services (fees, commissions, fringe benefits) [section_61(a)(1)]\n- Business income [section_61(a)(2)]\n- Gains from property dealings [section_61(a)(3)]\n- Interest, rents, royalties, dividends [section_61(a)(4)-(7)]\n- Annuities, pensions, and partnership income [section_61(a)(8), (10), (12)]\n- Income from discharge of indebtedness [section_61(a)(11)]\n- Other sources listed in the tax code [section_61(a)(13)-(14)]\n\nMore broadly, **gross income is all income in the form of money, property, and services that isn't exempt from tax**, including income from sources outside the United States or from the sale of your main home (even if you can exclude part or all of it) [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nSome specific items are excluded from gross income\u2014see Internal Revenue Code Part III (sections 101 and following) for those exclusions [section_61(b)].\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "section_61",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly states the core definition (\"all income from whatever source derived\") and references Section 61, matching the reference answer's key facts."
+    },
+    {
+      "id": "eval_05",
+      "question": "How is taxable income defined under the tax code?",
+      "reference_answer": "Taxable income means gross income minus the deductions allowed by the chapter, including (for those who itemize) or excluding (for those who take the standard deduction) certain deductions, per Section 63.",
+      "generated_answer": "# How Taxable Income is Defined\n\nUnder the tax code, **taxable income** is defined as:\n\n**Gross income minus allowable deductions** [26 U.S. Code \u00a7 63](https://www.law.cornell.edu/uscode/text/26/63)\n\nMore specifically, for individuals who don't itemize deductions (the most common case), taxable income equals:\n\n- **Adjusted gross income**, minus:\n  - The standard deduction [26 U.S. Code \u00a7 63](https://www.law.cornell.edu/uscode/text/26/63)\n  - The deduction for personal exemptions [26 U.S. Code \u00a7 63](https://www.law.cornell.edu/uscode/text/26/63)\n  - Certain other specific deductions (such as those under sections 199A, 170(p), 224, and 225) [26 U.S. Code \u00a7 63](https://www.law.cornell.edu/uscode/text/26/63)\n\nThe standard deduction varies by filing status. For tax year 2025, the basic standard deductions are: [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals)\n- Single: $15,750\n- Married filing jointly: $31,500\n- Head of household: $23,625\n\nAdditionally, those age 65 or older or blind may claim an additional standard deduction [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals), and there is a new enhanced senior deduction of $6,000 per person for 2025 (with income phase-out limits) [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals).\n\n**This is general information, not personalized tax advice.**",
+      "sources_retrieved": [
+        "pub17",
+        "section_63",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly states taxable income is gross income minus allowable deductions per Section 63, matching the reference answer's core definition."
+    },
+    {
+      "id": "eval_06",
+      "question": "Can my standard deduction be limited if my parents claim me as a dependent?",
+      "reference_answer": "Yes. If you can be claimed as a dependent on someone else's return, your standard deduction may be limited compared to the regular amount.",
+      "generated_answer": "Yes, your standard deduction can be limited if your parents claim you as a dependent on their return. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nWhen you can be claimed as a dependent on another person's return (such as your parents' return), your standard deduction may be limited. Instead of using the regular standard deduction amount for your filing status, you would need to use Table 10-3 to determine your standard deduction. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nFor dependents, the standard deduction is generally the larger of:\n1. Your earned income plus $450, or\n2. The minimum standard deduction\n\n\u2014but it cannot exceed the standard deduction amount for your filing status. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nFor example, if you're a dependent with $150 in wages and $780 in interest income, your standard deduction would be limited to $1,350 (the larger of $600 and $1,350), not the full $15,750 standard deduction for a single filer. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly states that standard deduction can be limited for dependents and provides accurate rules and examples consistent with reference answer."
+    },
+    {
+      "id": "eval_07",
+      "question": "Is there an extra standard deduction if I'm 65 or older?",
+      "reference_answer": "Yes, taxpayers who are 65 or older (or blind) can claim an additional standard deduction amount on top of the regular standard deduction.",
+      "generated_answer": "Yes, there is an extra standard deduction if you're 65 or older. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\n**Base additional amount:** If you're age 65 or older on the last day of the tax year and don't itemize deductions, you're entitled to a higher standard deduction. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf) The additional amount is $2,000 for single filers or head of household filers, and $1,600 for each qualifying spouse if married filing jointly. [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals)\n\n**Enhanced senior deduction (new for 2025):** Additionally, beginning in 2025, taxpayers age 65 or older may be eligible for an enhanced deduction for seniors with a maximum amount of $6,000 per person. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf) This enhanced deduction phases out above certain income thresholds. [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals)\n\nYou are considered age 65 on the day before your 65th birthday, so you can claim the higher standard deduction for 2025 if you were born before January 2, 1961. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly confirms the additional standard deduction for age 65+, matching the reference answer's key fact without contradicting it."
+    },
+    {
+      "id": "eval_08",
+      "question": "What is the enhanced deduction for seniors starting in 2025?",
+      "reference_answer": "Beginning in 2025, taxpayers 65 or older may be eligible for an enhanced senior deduction of up to $6,000 per person, subject to income phase-outs, under the One Big Beautiful Bill Act.",
+      "generated_answer": "# Enhanced Deduction for Seniors (2025)\n\nStarting in 2025, if you are age 65 or older, you may be eligible for an enhanced senior deduction of **up to $6,000 per person** ($12,000 if married filing jointly and both spouses qualify) [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\n## Key Eligibility Requirements:\n\n- You must have been born before January 2, 1961 [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n- You and/or your spouse must have a valid Social Security Number [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n- If married, you must file a joint return [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n- Your deduction phases out if your modified adjusted gross income exceeds $75,000 ($150,000 if married filing jointly) [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nThis deduction applies for tax years beginning in 2025 through tax years beginning no later than 2028 [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf). You claim it on Schedule 1-A (Form 1040) [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "deterministic",
+      "verdict": "pass",
+      "judge_reasoning": "Found expected value '6,000' in generated answer."
+    },
+    {
+      "id": "eval_09",
+      "question": "What is a Self-Select PIN used for when e-filing?",
+      "reference_answer": "A Self-Select PIN is used to electronically sign a tax return when filing online, either through software or a tax practitioner.",
+      "generated_answer": "A Self-Select PIN is used as an electronic signature method when e-filing your tax return [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nHere's what you need to know about it:\n\n**What it is:** A Self-Select PIN is any combination of five digits you choose (except five zeros) that you create yourself to sign your return electronically [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\n**When you use it:** You must use the Self-Select PIN method if you're filing online using tax software. If you're using a tax practitioner, you can choose between a Self-Select PIN or a Practitioner PIN [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\n**What's required for a valid signature:** Your electronic return is considered validly signed when it includes:\n- Your PIN\n- Last name\n- Date of birth\n- IP PIN (if the IRS issued you one)\n- Your adjusted gross income (AGI) from your 2024 return (if applicable), or your prior-year PIN if you filed electronically last year [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nIf filing jointly, your spouse must provide the same information [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\n**Restriction:** You cannot use the Self-Select PIN method if you are a first-time filer under age 16 at the end of 2025 [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly identifies Self-Select PIN as electronic signature method for e-filing, consistent with reference answer's core fact."
+    },
+    {
+      "id": "eval_10",
+      "question": "What happens if I don't include my IP PIN on an electronic return that requires one?",
+      "reference_answer": "Failure to include an issued IP PIN on the electronic return results in an invalid signature and a rejected return.",
+      "generated_answer": "If you are required to have an IP PIN and don't include it on your electronic return, **your return will be rejected as invalid**. \n\nSpecifically, the IRS states: \"Failure to include an issued IP PIN on the electronic return will result in an invalid signature and a rejected return.\" [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nThe IP PIN is required as part of your electronic signature. If the IRS issued you an IP PIN, all six digits must appear in the IP PIN spaces on your return for your electronic signature to be complete. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nIf you're unsure whether you have an IP PIN, you can check by going to IRS.gov/IPPIN and using the Get an IP PIN tool. All taxpayers are now eligible for an IP PIN. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly states the key fact that failure to include an IP PIN results in an invalid signature and rejected return, matching the reference answer exactly."
+    },
+    {
+      "id": "eval_11",
+      "question": "Does using e-file affect my chances of being audited?",
+      "reference_answer": "No, using e-file does not affect your chances of an IRS examination of your return.",
+      "generated_answer": "No, using e-file does not affect your chances of being audited. According to IRS Publication 17: \"Using e-file doesn't affect your chances of an IRS examination of your return.\" [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly states that e-file does not affect audit chances, matching the reference answer's key fact."
+    },
+    {
+      "id": "eval_12",
+      "question": "If I'm filing a joint return and both spouses have IP PINs, what do I need to do?",
+      "reference_answer": "Both taxpayers' IP PINs must be entered in the spaces provided on the joint return.",
+      "generated_answer": "If you're filing a joint return and both spouses were issued IP PINs, you need to enter both IP PINs in the spaces provided on your electronic return. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nYour electronic return is considered validly signed only when it includes both spouses' PINs along with each spouse's last name, date of birth, and IP PIN (if applicable). If applicable, you may also need to include each spouse's adjusted gross income (AGI) from your originally filed 2024 federal income tax return. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly states both IP PINs must be entered in spaces provided on joint return, consistent with reference answer."
+    },
+    {
+      "id": "eval_13",
+      "question": "Who can I claim as a dependent on my tax return?",
+      "reference_answer": "Dependents are defined under 26 U.S.C. Section 152, which sets out qualifying child and qualifying relative rules, among other requirements.",
+      "generated_answer": "# Who Can You Claim as a Dependent\n\nYou can claim someone as a dependent if they meet the requirements and fall into one of these categories [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf):\n\n- **A qualifying child**, or\n- **A qualifying relative**\n\n## Three Key Tests\n\nEven if someone is a qualifying child or relative, you can only claim them as a dependent if all three of these tests are met [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf):\n\n1. **Dependent Taxpayer Test** \u2014 You can't claim anyone as a dependent if you yourself can be claimed as a dependent by another taxpayer (with limited exceptions)\n2. **Joint Return Test** \u2014 You generally can't claim a married person who files a joint return as a dependent, unless that joint return is filed only to claim a refund of withheld or estimated tax\n3. **Citizen or Resident Test** \u2014 The person must be a U.S. citizen, U.S. resident alien, U.S. national, or a resident of Canada or Mexico [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\n## Who You Can't Claim\n\nYou can't claim housekeepers, maids, or servants as dependents, even if they meet other requirements [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nThe context provided doesn't include the detailed definitions of \"qualifying child\" and \"qualifying relative,\" so for complete information on who qualifies under those categories, consult IRS Publication 501.\n\n**This is general information, not personalized tax advice.**",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly identifies qualifying child and qualifying relative categories per 26 U.S.C. Section 152, adds relevant tests and restrictions, and appropriately notes missing details."
+    },
+    {
+      "id": "eval_14",
+      "question": "Should I take the standard deduction or itemize?",
+      "reference_answer": "You should use whichever method results in the lower tax; the standard deduction eliminates the need to itemize but you can compare both.",
+      "generated_answer": "# Should You Take the Standard Deduction or Itemize?\n\nYou should **itemize deductions if your total itemized deductions are more than your standard deduction amount.** [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf) Compare the two amounts and use whichever gives you the greater tax benefit.\n\n## When Itemizing May Benefit You\n\nYou may benefit from itemizing if you: [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n- Had large uninsured medical and dental expenses during the year\n- Paid interest and taxes on your home\n- Had large uninsured casualty or theft losses\n- Made significant charitable contributions\n\n## Your Standard Deduction Amount (2025)\n\nFor reference, the 2025 standard deduction amounts are: [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals)\n- **Single**: $15,750\n- **Married Filing Jointly**: $31,500\n- **Married Filing Separately**: $15,750\n- **Head of Household**: $23,625\n\nIf you're 65 or older or blind, you may qualify for an additional standard deduction of $2,000 (single/head of household) or $1,600 per qualifying spouse (married). [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals)\n\n## Important Note\n\nEven if your itemized deductions are less than your standard deduction, you can still elect to itemize if it benefits your state tax return. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\n**This is general information, not personalized tax advice.**",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly advises comparing itemized vs. standard deduction to determine which yields greater tax benefit, consistent with reference answer's core guidance."
+    },
+    {
+      "id": "eval_15",
+      "question": "What is the additional standard deduction amount for a married taxpayer who is 65 or older?",
+      "reference_answer": "$1,600 per qualifying spouse for the 2025 tax year.",
+      "generated_answer": "For a married taxpayer who is 65 or older, the additional standard deduction amount is **$1,600 per qualifying spouse** [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals).\n\nThis applies when you file a joint return or file a separate return and your spouse had no gross income and cannot be claimed as a dependent by another taxpayer [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nNote: There is also a new \"enhanced deduction for seniors\" beginning in 2025, with a maximum of $6,000 per person for taxpayers age 65 or older, though the context provided does not include complete details about income thresholds or phase-out rules for this enhanced deduction [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "section_63",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "deterministic",
+      "verdict": "pass",
+      "judge_reasoning": "Found expected value '1,600' in generated answer."
+    },
+    {
+      "id": "eval_16",
+      "question": "What tax topics does IRS Publication 17 cover?",
+      "reference_answer": "Publication 17, 'Your Federal Income Tax,' is a plain-language IRS guide covering filing requirements, standard and itemized deductions, income types, and other individual income tax topics.",
+      "generated_answer": "According to the provided excerpts, IRS Publication 17 covers the general rules for filing a federal income tax return [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf). Specifically, it explains:\n\n1. Who must file a return\n2. When the return is due\n3. How to e-file [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nThe publication is organized into four parts that follow Form 1040 and Form 1040-SR, covering topics such as filing information, filing status, dependents, tax withholding and estimated tax, and income and adjustments to income [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nHowever, the excerpts note that Publication 17 does **not** cover certain topics, which are instead addressed in other IRS publications:\n- Tip Income (see Pub. 531)\n- Dividends and Other Distributions (see Pub. 550)\n- Rental Income and Expenses (see Pub. 527) [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nFor a complete list of all topics covered, you would need to consult the full table of contents in Publication 17 itself [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly identifies key topics (filing requirements, income, deductions, filing status, dependents, withholding) covered in Publication 17, consistent with reference answer's description."
+    },
+    {
+      "id": "eval_17",
+      "question": "What is the standard deduction for head of household filers in 2025?",
+      "reference_answer": "$23,625 for the 2025 tax year.",
+      "generated_answer": "For 2025, the standard deduction for head of household filers is **$23,625** [pub17, Excerpt 2].\n\nIf you are age 65 or older or blind, you may qualify for an additional deduction. If you're head of household and at least 65 or blind, you can add $2,000 to your base standard deduction [pub17, Excerpt 1]. Additionally, if you're age 65 or older, you may be eligible for an enhanced senior deduction of up to $6,000 per person [pub17, Excerpt 3].\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "deterministic",
+      "verdict": "pass",
+      "judge_reasoning": "Found expected value '23,625' in generated answer."
+    },
+    {
+      "id": "eval_18",
+      "question": "Are unemployment benefits considered gross income?",
+      "reference_answer": "Yes, unemployment compensation is generally included as a form of income under the broad definition of gross income.",
+      "generated_answer": "Yes, unemployment benefits are generally considered gross income and must be included in your income for tax purposes.\n\nHere's how it works depending on the source:\n\n**Standard unemployment compensation:** You must include all unemployment compensation you receive in your income. It should be reported on Schedule 1 (Form 1040), line 7. [pub17, Excerpt 3]\n\n**Private unemployment fund:** Benefits from a private fund are taxable only to the extent they exceed your total contributions to the fund. [pub17, Excerpt 5]\n\n**Union fund benefits:** Benefits paid from regular union dues are included in your income on Schedule 1 (Form 1040), line 8z. However, if you contributed to a special union fund that isn't deductible, benefits are taxable only to the extent they exceed your contributions. [pub17, Excerpt 5]\n\n**State employee payments:** Similar payments made by states to employees not covered by unemployment compensation law are fully taxable, though they should be reported on Schedule 1 (Form 1040), line 8z rather than as unemployment compensation. [pub17, Excerpt 2]\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly states unemployment benefits are gross income and includes the reference answer's key fact without contradiction."
+    },
+    {
+      "id": "eval_19",
+      "question": "What are the capital gains tax rates for 2025?",
+      "reference_answer": "NOT ANSWERABLE FROM CORPUS \u2014 capital gains rate tables are not part of the ingested Pub 17/Title 26 excerpts. A correct system should say it doesn't have this information rather than guessing.",
+      "generated_answer": "I don't have information about capital gains tax rates in the provided context excerpts. The excerpts contain standard deductions and ordinary income tax rate schedules for 2025, but they don't include capital gains tax rates.\n\nTo find 2025 capital gains tax rates, you would need to consult other sections of IRS Publication 17 or the Internal Revenue Code that specifically address long-term and short-term capital gains taxation.\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly declines to answer, acknowledging the information isn't in the provided excerpts, consistent with the reference answer's intent."
+    },
+    {
+      "id": "eval_20",
+      "question": "What is the deadline to file my state tax return in California?",
+      "reference_answer": "NOT ANSWERABLE FROM CORPUS \u2014 this is a state tax question; the corpus only covers federal tax (Pub 17, Title 26). A correct system should say this is out of scope rather than guessing.",
+      "generated_answer": "I cannot answer that question based on the provided context. The excerpts from IRS Publication 17 and the Internal Revenue Code only address **federal** income tax deadlines and filing requirements. State tax return deadlines, including California's, are governed by state tax law, not federal tax law, and are not covered in these materials.\n\nFor California state tax filing deadlines, you would need to consult the California Department of Tax and Fee Administration (CDTFA) or California Franchise Tax Board (FTB).\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly declines to answer, explicitly states the question is outside the corpus scope (state vs. federal tax), and appropriately directs to state resources."
+    },
+    {
+      "id": "eval_21",
+      "question": "Can I claim the standard deduction if I'm filing as married filing separately?",
+      "reference_answer": "Generally yes, MFS filers have their own standard deduction amount (typically half the joint-return amount). However, if your spouse itemizes deductions on their separate return, you cannot claim the standard deduction at all and must itemize too.",
+      "generated_answer": "Not automatically. Here are the key rules for married filing separately filers:\n\n**You cannot claim the standard deduction if:**\n- Your spouse itemizes deductions on their return [pub17, Excerpt 4]\n\n**You can claim the standard deduction if:**\n- Your spouse also claims the standard deduction (doesn't itemize) [pub17, Excerpt 4]\n\n**Important exception:**\n- If you qualify for **head of household** filing status instead of married filing separately, you can claim the standard deduction even if your spouse itemizes [pub17, Excerpt 2]\n\nFor tax year 2025, if you do qualify for the standard deduction as married filing separately, your basic standard deduction is **$15,750** [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals). You may also qualify for an additional deduction of **$1,600 per qualifying spouse** if you're 65 or older or blind [IRS Revenue Procedure 2024-40 (2025 inflation adjustments)](https://www.irs.gov/credits-and-deductions-for-individuals).\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly states the key rule that spouse itemizing prevents standard deduction claim, and that standard deduction is available if spouse also claims it. Additional details about head of household and specific dollar amounts are unverified but not contradicted."
+    },
+    {
+      "id": "eval_22",
+      "question": "What is 26 U.S. Code Section 63 about?",
+      "reference_answer": "Section 63 defines 'taxable income' as gross income minus allowable deductions, and separately addresses the standard deduction for individuals who don't itemize.",
+      "generated_answer": "I don't have information about 26 U.S. Code Section 63 in the provided context excerpts. The context contains excerpts from IRS Publication 17 (2025) and tax year 2025 figures, but does not include the Internal Revenue Code Section 63.\n\nTo find information about Section 63, you would need to consult the Internal Revenue Code directly or IRS publications that specifically address that section.\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "fail",
+      "judge_reasoning": "Generated answer declines to answer despite reference showing the question is answerable from the corpus. The system should have provided the definition of taxable income and standard deduction information."
+    },
+    {
+      "id": "eval_23",
+      "question": "Does the standard deduction amount in the tax code itself reflect this year's actual dollar amount?",
+      "reference_answer": "No. The dollar amounts written in Section 63 are base statutory amounts that are adjusted annually for inflation via separate IRS revenue procedures; the actual current-year amount comes from that annual adjustment, not directly from the statute text.",
+      "generated_answer": "No. The dollar amounts in the Internal Revenue Code itself (Section 63) do **not** reflect the current year's actual amounts. [26 U.S. Code \u00a7 63](https://www.law.cornell.edu/uscode/text/26/63)\n\nHere's why:\n\nThe tax code contains **base dollar amounts that are adjusted annually for inflation** by the IRS through separate revenue procedures. [26 U.S. Code \u00a7 63](https://www.law.cornell.edu/uscode/text/26/63) The statute instructs that \"each dollar amount\" in the standard deduction provisions \"shall be increased by an amount equal to\" the cost-of-living adjustment for that year. [26 U.S. Code \u00a7 63](https://www.law.cornell.edu/uscode/text/26/63)\n\nFor the actual 2025 standard deduction amounts you should use, refer to the **IRS Publication 17 Standard Deduction Tables** or the current year's revenue procedures, not the statutory dollar figures themselves. [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nFor example, the tax code says the base amounts are \"$15,750\" and \"$31,500,\" but these reflect the 2025 inflation adjustments already applied by IRS procedures\u2014they are not hardcoded in the statute as permanent figures. [26 U.S. Code \u00a7 63](https://www.law.cornell.edu/uscode/text/26/63)\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "section_63",
+        "section_63",
+        "section_63",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly states that Section 63 contains base amounts adjusted annually for inflation via IRS procedures, matching the reference answer's key facts."
+    },
+    {
+      "id": "eval_24",
+      "question": "What is Schedule A used for?",
+      "reference_answer": "Schedule A (Form 1040) is used to itemize deductions, such as medical expenses, charitable contributions, and taxes, instead of taking the standard deduction.",
+      "generated_answer": "Based on the provided context, Schedule A (Form 1040) is used for **itemized deductions** [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nThe context indicates that taxpayers who don't use the standard deduction can instead itemize their deductions on Schedule A. Publication 17 mentions considering factors to decide whether to take the standard deduction or itemized deductions on Schedule A [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nHowever, the provided excerpts don't contain detailed information about what specific deductions can be itemized on Schedule A. For a complete list of allowable itemized deductions, you would need to consult the full Publication 17 or Schedule A instructions.\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly identifies Schedule A's purpose as itemizing deductions and acknowledges the standard deduction alternative, matching the reference answer's key facts."
+    },
+    {
+      "id": "eval_25",
+      "question": "Who is eligible for the enhanced senior deduction, and does everyone 65+ get the full amount?",
+      "reference_answer": "Taxpayers 65 or older may be eligible for the enhanced senior deduction of up to $6,000 per person, but it phases out above certain income thresholds, so not everyone 65+ receives the full amount.",
+      "generated_answer": "# Enhanced Senior Deduction Eligibility\n\n**Who is eligible:**\n- You must have been born before January 2, 1961 (making you age 65 or older) [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n- You and/or your spouse must have a valid SSN [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n- If married, you must file a joint return [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\n**Maximum amounts:**\n- $6,000 per person (or $12,000 if both spouses are eligible and filing jointly) [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\n**Income limitations:**\nNot everyone 65+ gets the full amount. Your deduction is **limited if your modified adjusted gross income exceeds:**\n- $75,000 (single filer) [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n- $150,000 (married filing jointly) [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf)\n\nThe context does not specify exactly how the deduction phases out once you exceed these income thresholds\u2014only that it will be \"limited.\" You would need to consult Schedule 1-A (Form 1040) and its instructions for the specific phase-out calculation [IRS Publication 17 (2025)](https://www.irs.gov/pub/irs-pdf/p17.pdf).\n\nThis is general information, not personalized tax advice.",
+      "sources_retrieved": [
+        "pub17",
+        "pub17",
+        "pub17",
+        "section_63",
+        "pub17"
+      ],
+      "grading_type": "llm_judge",
+      "verdict": "pass",
+      "judge_reasoning": "Generated answer correctly states the $6,000 per person amount, confirms not everyone 65+ gets the full amount due to income phase-outs, and provides additional eligible details consistent with reference."
+    }
+  ]
+}

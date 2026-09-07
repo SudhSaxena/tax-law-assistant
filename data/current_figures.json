@@ -1,0 +1,32 @@
+{
+  "tax_year": 2025,
+  "source": "IRS Revenue Procedure 2024-40, updated by the One Big Beautiful Bill Act (OBBBA, July 2025), and IRS Publication 17 (2025)",
+  "last_updated": "2026-08-31",
+  "note": "These figures are for the 2025 tax year (returns filed in 2026) and change annually. This file should be re-verified and updated each year against the current IRS revenue procedure before being trusted in a real application.",
+  "figures": {
+    "standard_deduction": {
+      "single": 15750,
+      "married_filing_jointly": 31500,
+      "married_filing_separately": 15750,
+      "head_of_household": 23625
+    },
+    "additional_standard_deduction_65_or_older_or_blind": {
+      "single_or_head_of_household": 2000,
+      "married_per_qualifying_spouse": 1600
+    },
+    "enhanced_senior_deduction_2025": {
+      "amount_per_person": 6000,
+      "note": "New for 2025 under OBBBA; phases out above certain income thresholds."
+    }
+  },
+  "next_year_preview": {
+    "tax_year": 2026,
+    "source": "IRS Revenue Procedure 2025-32",
+    "standard_deduction": {
+      "single": 16100,
+      "married_filing_jointly": 32200,
+      "head_of_household": 24150
+    },
+    "note": "Applies to returns filed in 2027, not the current 2025 tax year. Included here to illustrate why this file needs annual updates, not as the currently applicable figure."
+  }
+}

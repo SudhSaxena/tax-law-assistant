@@ -1,0 +1,37 @@
+{
+  "pub17": {
+    "authority_level": "irs_publication",
+    "requires_annual_adjustment": false,
+    "note": "IRS's own plain-language publication; typically already states current-year adjusted figures.",
+    "display_name": "IRS Publication 17 (2025)",
+    "url": "https://www.irs.gov/pub/irs-pdf/p17.pdf"
+  },
+  "section_63": {
+    "authority_level": "statute",
+    "requires_annual_adjustment": true,
+    "note": "Defines standard deduction structure; base dollar amounts in the statute are adjusted annually for inflation via separate IRS revenue procedures. Do not treat dollar figures here as current-year amounts.",
+    "display_name": "26 U.S. Code \u00a7 63",
+    "url": "https://www.law.cornell.edu/uscode/text/26/63"
+  },
+  "section_61": {
+    "authority_level": "statute",
+    "requires_annual_adjustment": false,
+    "note": "Defines gross income; not a dollar-figure section.",
+    "display_name": "26 U.S. Code \u00a7 61",
+    "url": "https://www.law.cornell.edu/uscode/text/26/61"
+  },
+  "section_152": {
+    "authority_level": "statute",
+    "requires_annual_adjustment": false,
+    "note": "Defines dependents; contains some thresholds that may still be indexed elsewhere, but not the primary annually-adjusted figures.",
+    "display_name": "26 U.S. Code \u00a7 152",
+    "url": "https://www.law.cornell.edu/uscode/text/26/152"
+  },
+  "current_figures_reference": {
+    "authority_level": "curated_reference",
+    "requires_annual_adjustment": false,
+    "note": "Internally maintained current-year figures reference, sourced from the annual IRS revenue procedure.",
+    "display_name": "IRS Revenue Procedure 2024-40 (2025 inflation adjustments)",
+    "url": "https://www.irs.gov/credits-and-deductions-for-individuals"
+  }
+}

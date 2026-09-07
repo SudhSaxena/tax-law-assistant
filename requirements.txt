@@ -1,0 +1,11 @@
+anthropic
+python-dotenv
+pypdf
+pdfplumber
+langchain-text-splitters
+voyageai
+chromadb
+fastapi
+uvicorn
+pyyaml
+pyspellchecker

@@ -1,0 +1,68 @@
+[1/25] eval_01: What is the standard deduction?
+    -> pass: The generated answer correctly defines the standard deduction as a fixed dollar amount that reduces taxable income and eliminates the need to itemize deductions like medical expenses and charitable contributions, which are the key facts in the reference answer; the additional details about 2025 amounts and senior deductions are factually consistent enhancements that do not contradict the reference material.
+[2/25] eval_02: What is the standard deduction amount for a single filer in 2025?
+    -> fail: While the generated answer correctly states the base standard deduction of $15,750, it contains a factual error regarding the additional deduction for age 65+: the reference answer does not mention a $2,000 additional deduction or a $6,000 enhanced senior deduction, and these figures contradict standard IRS rules (the actual additional amount for 2025 is $1,950 for single filers age 65+), constituting a material factual inaccuracy beyond the reference answer's scope.    
+[3/25] eval_03: What is the standard deduction for married filing jointly in 2025?
+    -> pass: The generated answer correctly states the standard deduction for married filing jointly in 2025 as $31,500, which matches the reference answer exactly, and provides helpful additional context about age and blindness adjustments without contradicting the core fact.
+[4/25] eval_04: How does the law define gross income?
+    -> judge_error: Could not parse judge output: ```json
+{"verdict": "pass", "reasoning": "The generated answer correctly identifies the core legal definition from 26 U.S.C. Section 61 as 'all income from whatever source derived' with specific exclu
+[5/25] eval_05: How is taxable income defined under the tax code?
+    -> pass: The generated answer is factually consistent with the reference answer's key definition: taxable income equals gross income minus allowed deductions, with different treatment depending on whether itemizing or taking the standard deduction, and cites Section 63 correctly.
+[6/25] eval_06: Can my standard deduction be limited if my parents claim me as a dependent?
+    -> pass: The generated answer confirms the key fact that a dependent's standard deduction can be limited if claimed by parents, which directly matches the reference answer, and provides additional accurate supporting details consistent with IRS guidance on dependent standard deduction calculations.
+[7/25] eval_07: Is there an extra standard deduction if I'm 65 or older?
+    -> pass: The generated answer correctly confirms the key fact from the reference answer—that there is an extra standard deduction for those 65 or older—and provides consistent supporting details about the additional deduction amounts and eligibility rules, without contradicting the reference answer's core claim.
+[8/25] eval_08: What is the enhanced deduction for seniors starting in 2025?
+    -> fail: The generated answer contradicts the reference answer by citing specific income phase-out thresholds ($75,000 single/$150,000 MFJ) and additional eligibility requirements (birth date, SSN requirement, joint filing requirement) that are not mentioned in the reference answer, and it attributes these details to 'pub17' without verification that such specifics are accurate or in the corpus.
+[9/25] eval_09: What is a Self-Select PIN used for when e-filing?
+    -> pass: The generated answer is factually consistent with the reference answer's core fact that a Self-Select PIN is used to electronically sign a tax return when filing online, and provides accurate additional details about how it works without contradicting the reference answer.
+[10/25] eval_10: What happens if I don't include my IP PIN on an electronic return that requires one?
+    -> pass: The generated answer correctly states that the return will be rejected if the IP PIN is not included, and it accurately captures the reference answer's key fact that failure to include an issued IP PIN results in an invalid signature and a rejected return.
+[11/25] eval_11: Does using e-file affect my chances of being audited?
+    -> pass: The generated answer directly states that using e-file does not affect chances of being audited, which is factually consistent with the reference answer, and includes supporting citation from IRS Publication 17.
+[12/25] eval_12: If I'm filing a joint return and both spouses have IP PINs, what do I need to do?
+    -> pass: The generated answer correctly states the key fact that both IP PINs must be entered in the spaces provided on the joint return, which is consistent with the reference answer, and provides additional relevant context about electronic filing requirements.
+[13/25] eval_13: Who can I claim as a dependent on my tax return?
+    -> pass: The generated answer correctly identifies the two main categories of dependents (qualifying child and qualifying relative) as referenced in 26 U.S.C. Section 152, and provides accurate supporting details about dependent eligibility tests, making it factually consistent with the reference answer's key fact.
+[14/25] eval_14: Should I take the standard deduction or itemize?
+    -> pass: The generated answer is factually consistent with the reference answer's key principle—choose whichever method (standard deduction or itemizing) results in the lower tax/greater benefit—and provides accurate supporting details about when each option applies, standard deduction amounts for 2025, and additional considerations like age-based increases.
+[15/25] eval_15: What is the additional standard deduction amount for a married taxpayer who is 65 or older?
+    -> pass: The generated answer correctly states the key fact from the reference answer ($1,600 per qualifying spouse for 2025), though it adds additional context about an enhanced senior deduction that goes beyond the reference answer but does not contradict it.
+[16/25] eval_16: What tax topics does IRS Publication 17 cover?
+    -> judge_error: Could not parse judge output: {"verdict": "pass", "reasoning": "The generated answer accurately identifies key topics covered in IRS Publication 17 (filing requirements, who must file, when returns are due, e-filing) and is consis
+[17/25] eval_17: What is the standard deduction for head of household filers in 2025?
+    -> pass: The generated answer correctly states the key fact that the standard deduction for head of household filers in 2025 is $23,625, which matches the reference answer exactly, and the additional contextual information about age-related adjustments is factually consistent with tax code provisions.
+[18/25] eval_18: Are unemployment benefits considered gross income?
+    -> pass: The generated answer correctly confirms that unemployment benefits are considered gross income and provides accurate additional detail about different types of unemployment compensation (government, private, union, and state employee payments), which is consistent with and expands upon the reference answer's key fact that unemployment compensation is included in gross income.
+[19/25] eval_19: What are the capital gains tax rates for 2025?
+    -> pass: The generated answer correctly declines to provide capital gains tax rates and acknowledges the information is not available in the corpus, which aligns with the reference answer's requirement to avoid hallucinating an answer to a question outside the system's knowledge base.
+[20/25] eval_20: What is the deadline to file my state tax return in California?
+    -> judge_error: Could not parse judge output: ```json
+{"verdict": "pass", "reasoning": "The generated answer correctly declines to answer by acknowledging the question is outside the corpus scope (state vs. federal tax) and appropriately directs
+[21/25] eval_21: Can I claim the standard deduction if I'm filing as married filing separately?
+    -> fail: The generated answer contradicts the reference answer by stating that married filing separately filers cannot claim the standard deduction if their spouse itemizes, whereas the reference answer confirms that MFS filers have their own standard deduction amount they can claim regardless of spouse's choices.
+[22/25] eval_22: What is 26 U.S. Code Section 63 about?
+    -> fail: The generated answer declines to answer by claiming insufficient information, but the reference answer provides a clear, factual definition of Section 63. The system should have provided the available information rather than declining to answer when the answer is in fact answerable.
+[23/25] eval_23: Does the standard deduction amount in the tax code itself reflect this year's actual dollar amount?
+    -> pass: The generated answer is factually consistent with the reference answer's key points: it correctly states that the tax code contains base statutory amounts (not current-year amounts), that these are adjusted annually for inflation, and that the actual current-year amounts come from separate IRS revenue procedures rather than directly from the statute text.
+[24/25] eval_24: What is Schedule A used for?
+    -> pass: The generated answer correctly identifies that Schedule A (Form 1040) is used for itemized deductions as an alternative to the standard deduction, which is consistent with the reference answer's key fact, even though it doesn't enumerate the specific examples (medical expenses, charitable contributions, taxes) mentioned in the reference.
+[25/25] eval_25: Who is eligible for the enhanced senior deduction, and does everyone 65+ get the full amount?
+    -> pass: The generated answer correctly identifies that taxpayers 65+ may be eligible for the enhanced senior deduction (up to $6,000 per person), confirms it phases out above income thresholds so not everyone 65+ gets the full amount, and provides additional accurate details about income limits and filing requirements that are consistent with the reference answer's key facts.
+
+==================================================
+Eval run complete — prompt version 1
+Passed: 18/25 (72.0%)
+Judge errors (unparseable, check manually): 3
+Full report saved to data/eval_results.json
+
+Failed questions:
+  - eval_02: What is the standard deduction amount for a single filer in 2025?
+    reason: While the generated answer correctly states the base standard deduction of $15,750, it contains a factual error regarding the additional deduction for age 65+: the reference answer does not mention a $2,000 additional deduction or a $6,000 enhanced senior deduction, and these figures contradict standard IRS rules (the actual additional amount for 2025 is $1,950 for single filers age 65+), constituting a material factual inaccuracy beyond the reference answer's scope.     
+  - eval_08: What is the enhanced deduction for seniors starting in 2025?
+    reason: The generated answer contradicts the reference answer by citing specific income phase-out thresholds ($75,000 single/$150,000 MFJ) and additional eligibility requirements (birth date, SSN requirement, joint filing requirement) that are not mentioned in the reference answer, and it attributes these details to 'pub17' without verification that such specifics are accurate or in the corpus.
+  - eval_21: Can I claim the standard deduction if I'm filing as married filing separately?
+    reason: The generated answer contradicts the reference answer by stating that married filing separately filers cannot claim the standard deduction if their spouse itemizes, whereas the reference answer confirms that MFS filers have their own standard deduction amount they can claim regardless of spouse's choices.
+  - eval_22: What is 26 U.S. Code Section 63 about?
+    reason: The generated answer declines to answer by claiming insufficient information, but the reference answer provides a clear, factual definition of Section 63. The system should have provided the available information rather than declining to answer when the answer is in fact answerable.

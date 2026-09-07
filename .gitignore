@@ -1,0 +1,12 @@
+venv/
+.env
+__pycache__/
+*.pyc
+chroma_db/
+cache.db
+logs/
+.DS_Store
+data/chunks.json
+data/chunks_with_embeddings.json
+docs/
+Learnings/
