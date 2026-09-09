@@ -20,9 +20,18 @@ app = FastAPI(title="Tax Law Assistant API")
 # :5500 or :3000) to call this API from the browser. Locked down to specific
 # origins later when this actually deploys — wide open here is fine for
 # local-only testing, not something to carry into production as-is.
+# Locked down to the actual frontend origins (local dev + deployed Vercel
+# app) instead of wide-open "*", now that the frontend has a real deployed
+# URL. Wide-open CORS was fine for local-only development, not appropriate
+# once this is a real, publicly reachable API.
+ALLOWED_ORIGINS = [
+    "http://localhost:5173",           # local Vite dev server
+    "https://tax-law-assistant.vercel.app",    # your real deployed frontend URL, no trailing slash
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
