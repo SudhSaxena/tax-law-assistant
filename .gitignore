@@ -8,5 +8,3 @@ logs/
 .DS_Store
 data/chunks.json
 data/chunks_with_embeddings.json
-docs/
-Learnings/

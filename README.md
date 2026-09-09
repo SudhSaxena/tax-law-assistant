@@ -49,8 +49,8 @@ ingestion and quality gating — see the roadmap below.
 - **Vector DB:** ChromaDB (local, persistent)
 - **Backend:** FastAPI
 - **Cache/usage tracking:** SQLite
-- **Frontend:** two options — a plain HTML/JS demo (`frontend/`, no build step)
-  and a React app (`web/`, richer UI, requires `npm install`)
+- **Frontend:** React app (`web/`, primary UI — requires `npm install`),
+  plus a plain HTML/JS fallback demo (`static-demo/`, no build step)
 
 ## Running it locally
 
@@ -75,8 +75,8 @@ Then start the API and open the frontend:
 uvicorn api:app --reload --app-dir src
 ```
 
-Open `frontend/index.html` in a browser, or run the React app in `web/`
-(see its own setup instructions).
+Open `static-demo/index.html` in a browser for the simple fallback UI, or run
+the React app in `web/` (see its own setup instructions).
 
 ## Evaluation
 
@@ -99,7 +99,7 @@ Section 63 about"), a known limitation left as a deliberately-scoped roadmap ite
 │   └── paths.py                                                 # central path resolution
 ├── data/                                                        # source docs + derived data
 ├── prompts/system_prompt.yaml                                   # versioned prompt config
-├── frontend/index.html                                          # simple local demo UI (no build step)
-├── web/                                                         # React app (richer UI)
+├── web/                                                         # React app (primary UI)
+├── static-demo/index.html                                       # simple HTML/JS fallback (no build step)
 └── scripts/debug/                                               # one-off debugging tools
 ```
