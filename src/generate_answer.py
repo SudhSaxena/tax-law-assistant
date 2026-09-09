@@ -1,14 +1,12 @@
-import os
 import json
 import yaml
-from dotenv import load_dotenv
 from anthropic import Anthropic
 from retrieve import retrieve
 from usage_tracker import log_usage
+from settings import settings
 from paths import SYSTEM_PROMPT_PATH, CURRENT_FIGURES_PATH, SOURCE_METADATA_PATH
 
-load_dotenv()
-client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+client = Anthropic(api_key=settings.anthropic_api_key)
 
 with open(SYSTEM_PROMPT_PATH, encoding="utf-8") as f:
     prompt_config = yaml.safe_load(f)

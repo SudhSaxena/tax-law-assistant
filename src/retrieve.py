@@ -1,14 +1,11 @@
-import os
 import chromadb
-from dotenv import load_dotenv
 import voyageai
 
 from cache import get_cached_embedding, set_cached_embedding
 from paths import CHROMA_DIR
+from settings import settings
 
-load_dotenv()
-
-vo = voyageai.Client(api_key=os.environ["VOYAGE_API_KEY"])
+vo = voyageai.Client(api_key=settings.voyage_api_key)
 client = chromadb.PersistentClient(path=str(CHROMA_DIR))
 collection = client.get_or_create_collection(name="tax_docs")
 

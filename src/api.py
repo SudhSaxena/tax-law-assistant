@@ -1,10 +1,11 @@
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, JSONResponse
 from pydantic import BaseModel
 import json
 import uuid
 import time
+from collections import defaultdict
 
 from generate_answer import generate_answer, generate_answer_stream, format_citations_for_display, ensure_disclaimer
 from retrieve import get_query_embedding
@@ -13,21 +14,15 @@ from usage_tracker import log_usage
 from query_normalizer import normalize_query
 from guardrails import flag_possible_injection
 from request_logger import log_event
+from settings import settings
 
 app = FastAPI(title="Tax Law Assistant API")
 
-# Allows a local frontend (running on a different port, e.g. a dev server on
-# :5500 or :3000) to call this API from the browser. Locked down to specific
-# origins later when this actually deploys — wide open here is fine for
-# local-only testing, not something to carry into production as-is.
-# Locked down to the actual frontend origins (local dev + deployed Vercel
-# app) instead of wide-open "*", now that the frontend has a real deployed
-# URL. Wide-open CORS was fine for local-only development, not appropriate
-# once this is a real, publicly reachable API.
-ALLOWED_ORIGINS = [
-    "http://localhost:5173",           # local Vite dev server
-    "https://tax-law-assistant.vercel.app",    # your real deployed frontend URL, no trailing slash
-]
+# ALLOWED_ORIGINS itself lives in settings.py (env-driven, comma-separated
+# string parsed into a list) — same pattern as the API keys. Means changing
+# a frontend URL (e.g. after renaming the Vercel app) is a config change in
+# Render's dashboard, not a code change + redeploy.
+ALLOWED_ORIGINS = settings.allowed_origins_list
 
 app.add_middleware(
     CORSMiddleware,
@@ -35,6 +30,74 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+RATE_LIMIT_MAX_REQUESTS = 5
+RATE_LIMIT_WINDOW_SECONDS = 60
+request_timestamps: dict = defaultdict(list)
+
+
+@app.middleware("http")
+async def rate_limit_middleware(request: Request, call_next):
+    # Simple in-memory sliding-window limiter, per client IP. Known
+    # limitations, worth being explicit about: resets on server restart, and
+    # wouldn't coordinate across multiple server instances if this app ever
+    # scaled horizontally — a real limit for this simple approach, not
+    # relevant yet at this project's scale (single Render instance).
+    if request.url.path in ("/ask", "/ask/stream"):
+        # Render (and most hosts) sit behind a reverse proxy, so
+        # request.client.host would show the PROXY's IP for every request,
+        # not the real visitor — that would make IP-based limiting useless.
+        # X-Forwarded-For carries the real client IP in that setup.
+        forwarded_for = request.headers.get("x-forwarded-for")
+        client_ip = forwarded_for.split(",")[0].strip() if forwarded_for else (
+            request.client.host if request.client else "unknown"
+        )
+
+        now = time.time()
+        timestamps = request_timestamps[client_ip]
+        timestamps[:] = [t for t in timestamps if now - t < RATE_LIMIT_WINDOW_SECONDS]
+
+        if len(timestamps) >= RATE_LIMIT_MAX_REQUESTS:
+            log_event(
+                "rate_limit_exceeded",
+                level="warning",
+                client_ip=client_ip,
+                path=request.url.path,
+            )
+            return JSONResponse(
+                status_code=429,
+                content={
+                    "detail": f"Rate limit exceeded: max {RATE_LIMIT_MAX_REQUESTS} "
+                    f"requests per {RATE_LIMIT_WINDOW_SECONDS} seconds. Try again shortly."
+                },
+            )
+
+        timestamps.append(now)
+
+    return await call_next(request)
+
+
+@app.middleware("http")
+async def origin_check_middleware(request: Request, call_next):
+    # Server-side origin check, separate from CORS. CORS headers only tell
+    # a BROWSER whether it's allowed to read a response — the server still
+    # fully processes the request either way. This middleware actually
+    # rejects the request server-side if the Origin doesn't match, which
+    # CORS alone never does.
+    #
+    # Real limitation: Origin/Referer are just request headers, trivially
+    # set to anything by a non-browser client (curl -H "Origin: ..."). This
+    # blocks casual/accidental direct access, not a deliberate attacker who
+    # can simply forge the header. It's a much weaker protection than actual
+    # rate limiting or API-key auth, kept simple here on request.
+    if request.url.path in ("/ask", "/ask/stream"):
+        origin = request.headers.get("origin") or request.headers.get("referer", "")
+        if not any(origin.startswith(allowed) for allowed in ALLOWED_ORIGINS):
+            return JSONResponse(
+                status_code=403,
+                content={"detail": "Requests must originate from an allowed origin."},
+            )
+    return await call_next(request)
 
 
 @app.middleware("http")

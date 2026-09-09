@@ -1,12 +1,9 @@
-import os
 import json
-from dotenv import load_dotenv
 import voyageai
 from paths import CHUNKS_PATH, CHUNKS_WITH_EMBEDDINGS_PATH
+from settings import settings
 
-load_dotenv()
-
-vo = voyageai.Client(api_key=os.environ["VOYAGE_API_KEY"])
+vo = voyageai.Client(api_key=settings.voyage_api_key)
 
 with open(CHUNKS_PATH, encoding="utf-8") as f:
     chunks = json.load(f)

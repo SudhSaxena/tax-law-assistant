@@ -1,15 +1,13 @@
-import os
 import json
 import re
 from datetime import datetime, timezone
-from dotenv import load_dotenv
 from anthropic import Anthropic
 
 from generate_answer import generate_answer, format_citations_for_display, PROMPT_VERSION
 from paths import EVAL_QUESTIONS_PATH, EVAL_RESULTS_PATH
+from settings import settings
 
-load_dotenv()
-client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+client = Anthropic(api_key=settings.anthropic_api_key)
 
 JUDGE_PROMPT = """You are grading a RAG system's answer against a reference \
 answer for an evaluation set.
