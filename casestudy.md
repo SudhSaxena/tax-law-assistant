@@ -42,8 +42,7 @@ question -> normalize -> guardrail check
 ```
 
 **Stack:** Claude Haiku 4.5 (generation) · Voyage AI (embeddings) · ChromaDB
-(vector store) · FastAPI (backend) · SQLite (cache + usage tracking) · React
-+ TypeScript (frontend) · Render + Vercel (deployment)
+(vector store) · Python FastAPI (backend) · SQLite (cache + usage tracking) · React + TypeScript (frontend) · Render + Vercel (deployment)
 
 ## Three real bugs, and why they mattered
 
@@ -139,18 +138,14 @@ Deploying a public LLM-backed endpoint raises a real question: what stops
 someone from hitting `/ask` in a loop and running up API costs? This was
 explored properly rather than adding one narrow fix:
 
-- **CORS is not an access-control mechanism** — it's browser-enforced only;
-  a non-browser client bypasses it entirely. Server-side checks are what
-  actually matter.
-- **A frontend-embedded API "secret" isn't secret** — anything shipped to a
-  browser is visible via DevTools. Real secrecy requires a
-  Backend-for-Frontend pattern (a server-side proxy holding the real
-  credential), which is how most production consumer AI products are
-  actually architected.
-- **What's implemented at this project's scale:** server-side rate limiting
-  (per-IP, correctly proxy-aware) and an origin check, paired with
-  provider-level spending caps as the safety net that holds even if
-  application-level defenses are bypassed.
+- **What's implemented:** CORS locked down to
+  specific allowed origins (not wildcard), a server-side origin check, and
+  per-IP rate limiting — layered together since each covers a different
+  gap (CORS restricts which *websites'* JavaScript can read a response,
+  the origin check adds a server-side reject that CORS alone doesn't
+  provide, and rate limiting caps damage regardless of either) — paired
+  with provider-level spending caps as the safety net that holds even if
+  every application-level defense is bypassed.
 - **What's intentionally not implemented, and why:** full user
   authentication and a BFF proxy — the right answer for a real product with
   real users, but disproportionate scope for a portfolio demonstration of
